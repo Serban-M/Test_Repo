@@ -26,3 +26,10 @@ steps:
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     runWorkflowAnalysis: true
     traceLevel: 'Information'
+- task: UiPathDeploy@4
+  inputs:
+    orchestratorConnection: 'Orchestrator_Connection'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+    folderName: 'TestFolder'
+    entryPoints: 'TestCase.xaml'
+    traceLevel: 'Information'
