@@ -19,9 +19,10 @@ steps:
 - task: UiPathPack@4
   inputs:
     versionType: 'AutoVersion'
-    projectJsonPath: 'C:\Users\serban.mocanu\Downloads\UIPCLI - Andreea\UIPCLI\UIPCLI'
+    projectJsonPath: 'C:\Users\serban.mocanu\Downloads\UIPCLI - Andreea\UIPCLI\UIPCLI\project.json'
     outputType: 'Tests'
     splitOutput: false
     orchestratorConnection: 'Orchestrator_Connection'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    runWorkflowAnalysis: true
     traceLevel: 'Information'
